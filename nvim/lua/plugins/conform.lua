@@ -7,6 +7,7 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			python = { "ruff" },
+			typst = { "typstyle" },
 		},
 		formatters = {
 			ruff = {
@@ -19,7 +20,7 @@ return {
 		},
 	},
 	init = function()
-		vim.keymap.set("", "<leader>f", function()
+		vim.keymap.set("", "<leader>c", function()
 			require("conform").format({ async = true }, function(err)
 				if not err then
 					local mode = vim.api.nvim_get_mode().mode
