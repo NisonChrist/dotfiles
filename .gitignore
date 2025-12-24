@@ -1,0 +1,9 @@
+*
+!.gitignore
+!nvim/
+!nvim/**
+!wezterm/
+!wezterm/**
+!fish/
+!fish/**
+fish/completions/
