@@ -1,0 +1,14 @@
+command = /usr/local/bin/fish
+font-size = 15
+font-family = "Maple Mono NF CN" 
+
+background-opacity = 0.85
+background-blur-radius = 20
+
+cursor-invert-fg-bg = true
+cursor-style = block
+
+theme = "Solarized Dark Patched"
+
+shell-integration-features = no-cursor
+shell-integration = fish

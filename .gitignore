@@ -7,3 +7,5 @@
 !fish/
 !fish/**
 fish/completions/
+!ghostty/
+!ghostty/**
