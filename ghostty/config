@@ -1,9 +1,11 @@
 command = /usr/local/bin/fish
 font-size = 15
-font-family = "Maple Mono NF CN" 
+# font-family = "Google Sans Code"
+# font-family = "Maple Mono NF CN"
+font-family = "Jetbrain Mono Nerd Font"
 
-background-opacity = 0.85
-background-blur-radius = 20
+background-opacity = 0.8
+background-blur-radius = 10
 
 cursor-invert-fg-bg = true
 cursor-style = block
@@ -12,3 +14,7 @@ theme = "Solarized Dark Patched"
 
 shell-integration-features = no-cursor
 shell-integration = fish
+
+keybind = global:cmd+g=toggle_quick_terminal
+# keybind = global:cmd+backquote=toggle_quick_terminal
+
