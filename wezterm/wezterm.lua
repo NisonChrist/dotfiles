@@ -1,13 +1,13 @@
 local wezterm = require 'wezterm'
+local ui = require 'ui'
 
 local config = {}
 
 -- config.color_scheme = 'Builtin Dark'
--- config.color_scheme = 'Catppuccin Macchiato'
+config.color_scheme = 'Catppuccin Mocha'
 -- config.color_scheme = 'Everforest Dark (Gogh)'
 -- config.color_scheme = 'Wez'
 -- config.color_scheme = 'Dracula (Official)'
-config.color_scheme = 'Solarized Dark - Patched'
 
 config.font = wezterm.font 'Maple Mono Normal NF CN'
 -- config.font = wezterm.font 'Jetbrains Mono'
@@ -21,14 +21,10 @@ config.force_reverse_video_cursor = true
 config.initial_rows = 35
 config.initial_cols = 120
 
-config.tab_bar_at_bottom = false
-config.use_fancy_tab_bar = true
-config.hide_tab_bar_if_only_one_tab = true
-
 -- config.window_decorations = "TITLE | RESIZE"
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.85
-config.macos_window_background_blur = 10
+-- config.window_background_opacity = 0.9
+config.macos_window_background_blur = 20
 config.window_padding = {
   left = '0.5cell',
   right = '0.5cell',
@@ -38,5 +34,9 @@ config.window_padding = {
 
 -- Spawn a fish shell in login mode
 config.default_prog = { '/usr/local/bin/fish', '-l' }
+
+-- 应用 UI 配置
+ui.apply_to_config(config)
+ui.setup()
 
 return config

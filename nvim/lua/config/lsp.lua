@@ -3,4 +3,5 @@ vim.lsp.enable({
 	"ty",
 	"ts_ls",
 	"tinymist",
+  "rust_analyzer"
 })

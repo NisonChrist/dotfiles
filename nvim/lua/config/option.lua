@@ -11,7 +11,7 @@ vim.o.clipboard = 'unnamedplus'
 
 vim.o.swapfile = false
 
-vim.o.cursorline = false
+vim.o.cursorline = true
 vim.o.termguicolors = true
 
 vim.g.loaded_netrw = 1

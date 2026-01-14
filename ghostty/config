@@ -1,20 +1,81 @@
 command = /usr/local/bin/fish
-font-size = 15
-# font-family = "Google Sans Code"
-# font-family = "Maple Mono NF CN"
-font-family = "Jetbrain Mono Nerd Font"
 
-background-opacity = 0.8
+font-size = 16
+font-family = "Maple Mono Normal NF CN"
+# font-family = "Jetbrain Mono Nerd Font"
+
+window-width = 160
+window-height = 50
+
+background-opacity = 0.95
 background-blur-radius = 10
 
 cursor-invert-fg-bg = true
 cursor-style = block
 
-theme = "Solarized Dark Patched"
+# theme = "Solarized Dark Patched"
+# theme = "Dracula+"
+# theme = "Gruvbox Dark Hard"
+theme = "Catppuccin Mocha"
+# theme = "Wez"
+
+# background = #1e1e1f
+# foreground = #cbd5e1
+# palette = 8=#666666
+# palette = 12=#a8e0ff
+# palette = 14=#bafffe
+# palette = 10=#bdf8c7
+# palette = 13=#ebe5ff
+# palette = 9=#ffc4c4
+# palette = 15=#ffffff
+# palette = 11=#ffe8b9
+# palette = 0=#333333
+# palette = 4=#8fc7ff
+# palette = 6=#a1e8e5
+# palette = 2=#a4dfae
+# palette = 5=#d2ccff
+# palette = 1=#edabab
+# palette = 7=#f3f2f2
+# palette = 3=#eecfa0
+# cursor-color = #cbd5e1
+# selection-background =#cbd5e1
+# selection-foreground =#1e1e1f
+
+# background = #0a0a0a
+# foreground = #e5e5e5
+# palette = 0=#262626
+# palette = 1=#f87171
+# palette = 2=#4ade80
+# palette = 3=#eab308
+# palette = 4=#60a5fa
+# palette = 5=#f472b6
+# palette = 6=#93c5fd
+# palette = 7=#f5f5f5
+# palette = 8=#525252
+# palette = 9=#fca5a5
+# palette = 10=#86efac
+# palette = 11=#fde047
+# palette = 12=#93c5fd
+# palette = 13=#d8b4fe
+# palette = 14=#bfdbfe
+# palette = 15=#fafafa
 
 shell-integration-features = no-cursor
 shell-integration = fish
 
+quick-terminal-size = 50%,100px
+# Keybindings
 keybind = global:cmd+g=toggle_quick_terminal
-# keybind = global:cmd+backquote=toggle_quick_terminal
+
+keybind = cmd+s>\=new_split:right
+keybind = cmd+s>-=new_split:down
+
+keybind = cmd+s>l=goto_split:right
+keybind = cmd+s>h=goto_split:left 
+keybind = cmd+s>k=goto_split:up 
+keybind = cmd+s>j=goto_split:down 
+
+keybind = cmd+s>z=toggle_split_zoom 
+
+keybind = cmd+s>e=equalize_splits
 

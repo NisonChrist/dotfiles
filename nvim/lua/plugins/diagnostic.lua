@@ -1,4 +1,4 @@
-return {
+local diagnostic = {
     "rachartier/tiny-inline-diagnostic.nvim",
     event = "VeryLazy",
     priority = 1000,
@@ -7,3 +7,5 @@ return {
         vim.diagnostic.config({ virtual_text = false }) -- Disable Neovim's default virtual text diagnostics
     end,
 }
+
+return diagnostic
