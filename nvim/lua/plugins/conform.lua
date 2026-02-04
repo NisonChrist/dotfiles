@@ -8,6 +8,7 @@ return {
 			lua = { "stylua" },
 			python = { "ruff" },
 			typst = { "typstyle" },
+      rust = {"rust-analyzer"}
 		},
 		formatters = {
 			ruff = {

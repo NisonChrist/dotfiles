@@ -1,5 +1,5 @@
 vim.o.number = true
-vim.o.relativenumber = true
+vim.o.relativenumber = false
 vim.o.signcolumn = 'yes'
 
 vim.o.tabstop = 2
@@ -11,7 +11,7 @@ vim.o.clipboard = 'unnamedplus'
 
 vim.o.swapfile = false
 
-vim.o.cursorline = true
+vim.o.cursorline = false
 vim.o.termguicolors = true
 
 vim.g.loaded_netrw = 1

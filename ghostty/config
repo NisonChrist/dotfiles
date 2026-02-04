@@ -7,17 +7,19 @@ font-family = "Maple Mono Normal NF CN"
 window-width = 160
 window-height = 50
 
-background-opacity = 0.95
-background-blur-radius = 10
+background-opacity = 0.9
+background-blur-radius = 30
 
 cursor-invert-fg-bg = true
 cursor-style = block
+custom-shader = "~/.config/ghostty/shaders/cursor_smear.glsl"
 
+# theme = "Wez"
 # theme = "Solarized Dark Patched"
 # theme = "Dracula+"
 # theme = "Gruvbox Dark Hard"
-theme = "Catppuccin Mocha"
-# theme = "Wez"
+# theme = "Catppuccin Mocha"
+theme = "Carbonfox"
 
 # background = #1e1e1f
 # foreground = #cbd5e1
@@ -63,7 +65,7 @@ theme = "Catppuccin Mocha"
 shell-integration-features = no-cursor
 shell-integration = fish
 
-quick-terminal-size = 50%,100px
+# quick-terminal-size = 50%,100px
 # Keybindings
 keybind = global:cmd+g=toggle_quick_terminal
 

@@ -1,7 +1,9 @@
 vim.lsp.enable({
 	"lua_ls",
 	"ty",
-	"ts_ls",
+	-- "ts_ls",
+  "tsgo",
 	"tinymist",
-  "rust_analyzer"
+  "rust_analyzer",
+  "zls"
 })

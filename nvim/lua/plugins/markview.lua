@@ -9,11 +9,6 @@ return {
 			preview = { enable = false },
 		})
 
-		vim.keymap.set(
-			"n",
-			"<leader>m",
-			"<CMD>Markview<CR>",
-			{ desc = "Toggles `markview` previews globally." }
-		)
+		vim.keymap.set("n", "<leader>m", "<CMD>Markview<CR>", { desc = "Toggles `markview` previews globally." })
 	end,
 }

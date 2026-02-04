@@ -9,3 +9,7 @@
 fish/completions/
 !ghostty/
 !ghostty/**
+!btop/
+!btop/**
+!kitty/
+!kitty/**

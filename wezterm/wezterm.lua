@@ -31,6 +31,7 @@ config.window_padding = {
   top = '0.5cell',
   bottom = '0.5cell',
 }
+config.adjust_window_size_when_changing_font_size = false
 
 -- Spawn a fish shell in login mode
 config.default_prog = { '/usr/local/bin/fish', '-l' }
