@@ -2,7 +2,7 @@
 # https://github.com/EdenEast/nightfox.nvim
 
 # Main background, empty for terminal default
-theme[main_bg]="#161616"
+theme[main_bg]="#16161600"
 
 # Main text color
 theme[main_fg]="#f2f4f8"
