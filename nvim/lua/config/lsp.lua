@@ -1,9 +1,10 @@
 vim.lsp.enable({
-	"lua_ls",
-	"ty",
-	-- "ts_ls",
-  "tsgo",
-	"tinymist",
-  "rust_analyzer",
-  "zls"
+	"lua_ls",       -- lua
+	"ty",           -- python
+	-- "ts_ls",     -- typescript
+  "tsgo",         -- typescript
+	"tinymist",     -- typst
+  "rust_analyzer",-- rust
+  "zls",          -- zig
+  "taplo"         -- toml
 })

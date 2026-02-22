@@ -1,3 +1,7 @@
+-- Normal mode 
+vim.keymap.set("n", "H", "0")
+vim.keymap.set("n", "L", "$")
+
 -- Command mode shortcut
 vim.keymap.set("n", "<leader>w", ":w<cr>")
 vim.keymap.set("n", "<leader>q", ":q<cr>")
