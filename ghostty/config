@@ -1,4 +1,5 @@
 command = /usr/local/bin/fish
+term = xterm-256color
 
 font-size = 16
 font-family = "Maple Mono Normal NF CN"
@@ -8,7 +9,7 @@ window-width = 160
 window-height = 50
 
 background-opacity = 0.9
-background-blur-radius = 30
+background-blur-radius = 10
 
 cursor-invert-fg-bg = true
 cursor-style = block
