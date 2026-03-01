@@ -4,7 +4,8 @@ local ui = require 'ui'
 local config = {}
 
 -- config.color_scheme = 'Builtin Dark'
-config.color_scheme = 'Catppuccin Mocha'
+-- config.color_scheme = 'Catppuccin Mocha'
+config.color_scheme = 'carbonfox'
 -- config.color_scheme = 'Everforest Dark (Gogh)'
 -- config.color_scheme = 'Wez'
 -- config.color_scheme = 'Dracula (Official)'
@@ -23,7 +24,7 @@ config.initial_cols = 120
 
 -- config.window_decorations = "TITLE | RESIZE"
 config.window_decorations = "RESIZE"
--- config.window_background_opacity = 0.9
+config.window_background_opacity = 0.9
 config.macos_window_background_blur = 20
 config.window_padding = {
   left = '0.5cell',
