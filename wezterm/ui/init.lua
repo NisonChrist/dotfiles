@@ -4,7 +4,7 @@ local utils = require("ui.utils")
 
 local M = {}
 
-local COLORS = palette.carbonfox
+local C = palette.carbonfox
 
 -- 格式化 tab 标题
 function M.format_tab_title(tab, tabs, panes, config, hover, max_width)
@@ -25,39 +25,28 @@ function M.format_tab_title(tab, tabs, panes, config, hover, max_width)
 		title_content = wezterm.truncate_right(title_content, max_width - 1) .. "…"
 	end
 
-	-- Carbonfox 配色
-	local colors = {
-		bg = "#0c0c0c",
-		fg = "#f2f4f8",
-		active_fg = "#f2f4f8",
-		inactive_fg = "#7b7c7e",
-		bracket_active = "#78a9ff",
-		bracket_inactive = "#353535",
-		separator = "#353535",
-	}
-
 	local foreground
 	local bracket_color
 
 	if tab.is_active then
-		foreground = colors.active_fg
-		bracket_color = colors.bracket_active
+		foreground = C.fg1
+		bracket_color = C.blue
 	elseif hover then
-		foreground = colors.fg
-		bracket_color = colors.bracket_inactive
+		foreground = C.fg
+		bracket_color = C.bg4
 	else
-		foreground = colors.inactive_fg
-		bracket_color = colors.bracket_inactive
+		foreground = C.fg3
+		bracket_color = C.bg4
 	end
 
 	-- 判断是否是最后一个 tab
 	local is_last = tab.tab_index == #tabs - 1
 
-	-- 判断是否是第一个 tab，添加左侧 padding
+	-- 判断是否是第一个 tab
 	local is_first = tab.tab_index == 0
 
 	local elements = {
-		{ Background = { Color = colors.bg } },
+		{ Background = { Color = C.bg0 } },
 	}
 
 	-- 如果是第一个 tab，添加左侧 padding
@@ -66,46 +55,30 @@ function M.format_tab_title(tab, tabs, panes, config, hover, max_width)
 	end
 
 	table.insert(elements, { Foreground = { Color = bracket_color } })
-	-- table.insert(elements, { Text = '[ ' })
 	table.insert(elements, { Foreground = { Color = foreground } })
 	table.insert(elements, { Attribute = { Intensity = tab.is_active and "Bold" or "Normal" } })
 	table.insert(elements, { Text = title_content })
 	table.insert(elements, { Attribute = { Intensity = "Normal" } })
 	table.insert(elements, { Foreground = { Color = bracket_color } })
-	-- table.insert(elements, { Text = ' ]' })
 
-	-- 添加分隔符（如果不是最后一个 tab）
-	if not is_last then
-		table.insert(elements, { Foreground = { Color = colors.separator } })
-		table.insert(elements, { Text = " | " })
-	else
-	  table.insert(elements, { Foreground = { Color = colors.separator } })
-		table.insert(elements, { Text = " | " })
-	end
+	-- 添加分隔符
+	table.insert(elements, { Foreground = { Color = C.bg4 } })
+	table.insert(elements, { Text = " | " })
 
 	return elements
 end
 
 -- 更新右侧状态栏
 function M.update_right_status(window, pane)
-	-- Carbonfox 配色
-	local colors = {
-		bg = "#0c0c0c",
-		fg = "#f2f4f8",
-		accent = "#78a9ff",
-		surface = "#353535",
-		subtext = "#b6b8bb",
-	}
-
 	-- 获取当前工作目录
 	local cwd = ""
 	local cwd_uri = pane:get_current_working_dir()
 	if cwd_uri then
 		cwd = cwd_uri.file_path or ""
-		-- 缩短路径，将 home 目录替换为 ~
+		-- 缩短路径，将 home 目录替换为 ~（转义特殊字符以安全用于 gsub）
 		local home = os.getenv("HOME")
 		if home then
-			cwd = cwd:gsub("^" .. home, "~")
+			cwd = cwd:gsub("^" .. utils.escape_pattern(home), "~")
 		end
 		-- 如果路径太长，只保留后面部分
 		if #cwd > 40 then
@@ -114,10 +87,9 @@ function M.update_right_status(window, pane)
 	end
 
 	-- 获取当前时间
-	-- local time = wezterm.strftime("%H:%M")
-	-- local date = wezterm.strftime("%m/%d %a")
 	local time = wezterm.strftime("%H:%M:%S")
-	local date = wezterm.strftime '%Y-%m-%d %a'
+	local date = wezterm.strftime("%Y-%m-%d %a")
+
 	-- 获取电池状态
 	local battery = ""
 	for _, b in ipairs(wezterm.battery_info()) do
@@ -140,23 +112,21 @@ function M.update_right_status(window, pane)
 	end
 
 	window:set_right_status(wezterm.format({
-		{ Foreground = { Color = colors.subtext } },
+		{ Foreground = { Color = C.fg2 } },
 		{ Text = wezterm.nerdfonts.md_folder .. " " },
-		{ Foreground = { Color = colors.fg } },
+		{ Foreground = { Color = C.fg } },
 		{ Text = cwd .. "  " },
-		{ Foreground = { Color = colors.surface } },
+		{ Foreground = { Color = C.bg4 } },
 		{ Text = "│  " },
-		{ Foreground = { Color = colors.subtext } },
+		{ Foreground = { Color = C.fg2 } },
 		{ Text = wezterm.nerdfonts.md_calendar .. " " },
-		{ Foreground = { Color = colors.fg } },
+		{ Foreground = { Color = C.fg } },
 		{ Text = date .. "  " },
-		{ Foreground = { Color = colors.subtext } },
+		{ Foreground = { Color = C.fg2 } },
 		{ Text = wezterm.nerdfonts.md_clock_outline .. " " },
-		{ Foreground = { Color = colors.fg } },
-		{ Attribute = { Intensity = "Normal" } },
+		{ Foreground = { Color = C.fg } },
 		{ Text = time .. "  " },
-		{ Attribute = { Intensity = "Normal" } },
-		{ Foreground = { Color = colors.subtext } },
+		{ Foreground = { Color = C.fg2 } },
 		{ Text = battery .. " " },
 	}))
 end
@@ -168,30 +138,30 @@ function M.apply_to_config(config)
 	config.tab_bar_at_bottom = false
 	config.hide_tab_bar_if_only_one_tab = false -- 保持 tab bar 显示以展示状态栏
 
-	-- Tab bar 颜色配置 (Carbonfox)
+	-- Tab bar 颜色配置
 	config.colors = config.colors or {}
 	config.colors.tab_bar = {
-		background = "#0c0c0c",
+		background = C.bg0,
 		active_tab = {
-			bg_color = "#282828",
-			fg_color = "#f2f4f8",
+			bg_color = C.bg3,
+			fg_color = C.fg1,
 			intensity = "Bold",
 		},
 		inactive_tab = {
-			bg_color = "#161616",
-			fg_color = "#7b7c7e",
+			bg_color = C.bg,
+			fg_color = C.fg3,
 		},
 		inactive_tab_hover = {
-			bg_color = "#1e1e1e",
-			fg_color = "#b6b8bb",
+			bg_color = C.bg2,
+			fg_color = C.fg2,
 		},
 		new_tab = {
-			bg_color = "#0c0c0c",
-			fg_color = "#7b7c7e",
+			bg_color = C.bg0,
+			fg_color = C.fg3,
 		},
 		new_tab_hover = {
-			bg_color = "#282828",
-			fg_color = "#f2f4f8",
+			bg_color = C.bg3,
+			fg_color = C.fg1,
 		},
 	}
 
@@ -204,8 +174,8 @@ function M.apply_to_config(config)
 	config.window_frame = {
 		font = wezterm.font({ family = "Maple Mono Normal NF CN", weight = "Bold" }),
 		font_size = 15.0,
-		active_titlebar_bg = "#0c0c0c",
-		inactive_titlebar_bg = "#0c0c0c",
+		active_titlebar_bg = C.bg0,
+		inactive_titlebar_bg = C.bg0,
 	}
 end
 

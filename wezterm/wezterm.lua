@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 local ui = require 'ui'
 
-local config = {}
+local config = wezterm.config_builder()
 
 -- config.color_scheme = 'Builtin Dark'
 -- config.color_scheme = 'Catppuccin Mocha'
@@ -24,8 +24,8 @@ config.initial_cols = 120
 
 -- config.window_decorations = "TITLE | RESIZE"
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.9
-config.macos_window_background_blur = 20
+config.window_background_opacity = 0.85
+config.macos_window_background_blur = 15
 config.window_padding = {
   left = '0.5cell',
   right = '0.5cell',

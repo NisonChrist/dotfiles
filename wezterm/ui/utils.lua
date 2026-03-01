@@ -2,6 +2,11 @@ local wezterm = require("wezterm")
 
 local M = {}
 
+-- Escape special Lua pattern characters in a string
+function M.escape_pattern(str)
+	return (str:gsub("([%(%)%.%%%+%-%*%?%[%]%^%$])", "%%%1"))
+end
+
 -- Get Process ICON
 function M.get_process_icon(process_name)
 	local icons = {
