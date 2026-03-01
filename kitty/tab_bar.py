@@ -108,6 +108,8 @@ def _draw_right_status(screen: Screen, is_last: bool) -> int:
     cells = [
         (CLOCK_FG, CLOCK_BG, datetime.datetime.now().strftime(" %H:%M ")),
         (DATE_FG, DATE_BG, datetime.datetime.now().strftime(" %Y/%m/%d ")),
+        # (DATE_FG, DATE_BG, datetime.datetime.now().strftime(" %a %b %d %H:%M %Y ")),
+        # (DATE_FG, DATE_BG, datetime.datetime.now().strftime(" %c ")),
     ]
 
     right_status_length = 0
