@@ -8,13 +8,17 @@ return {
 			lua = { "stylua" },
 			python = { "ruff" },
 			typst = { "typstyle" },
-      rust = {"rust-analyzer"}
+      rust = {"rust-analyzer"},
+      json = {"oxfmt"}
 		},
 		formatters = {
 			ruff = {
 				command = "ruff",
 				args = { "format", "--stdin-filename", "$FILENAME" },
 			},
+      oxfmt = {
+        command = "oxfmt",
+      }
 		},
 		default_format_opts = {
 			lsp_format = "fallback",

@@ -235,4 +235,4 @@ local oil = {
     })
   end
 }
-return { oil }
+return { nvim_tree }

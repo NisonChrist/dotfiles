@@ -1,3 +1,5 @@
+-- if true then return {} end
+
 local nightfox = {
 	"EdenEast/nightfox.nvim",
 	lazy = false,

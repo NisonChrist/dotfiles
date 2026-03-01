@@ -6,5 +6,4 @@ vim.lsp.enable({
 	"tinymist",     -- typst
   "rust_analyzer",-- rust
   "zls",          -- zig
-  "taplo"         -- toml
 })
