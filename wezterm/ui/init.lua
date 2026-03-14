@@ -11,6 +11,8 @@ function M.format_tab_title(tab, tabs, panes, config, hover, max_width)
 	local process_name = utils.get_process_name(tab)
 	local icon = utils.get_process_icon(process_name)
 	local dir = utils.get_current_directory(tab)
+  _ = panes
+  _ = config
 
 	-- 构建标题内容
 	local title_content
@@ -112,21 +114,21 @@ function M.update_right_status(window, pane)
 	end
 
 	window:set_right_status(wezterm.format({
-		{ Foreground = { Color = C.fg2 } },
+		{ Foreground = { Color = C.fg3 } },
 		{ Text = wezterm.nerdfonts.md_folder .. " " },
-		{ Foreground = { Color = C.fg } },
+		{ Foreground = { Color = C.fg3 } },
 		{ Text = cwd .. "  " },
-		{ Foreground = { Color = C.bg4 } },
+		{ Foreground = { Color = C.bg3 } },
 		{ Text = "│  " },
-		{ Foreground = { Color = C.fg2 } },
+		{ Foreground = { Color = C.fg3 } },
 		{ Text = wezterm.nerdfonts.md_calendar .. " " },
-		{ Foreground = { Color = C.fg } },
+		{ Foreground = { Color = C.fg3 } },
 		{ Text = date .. "  " },
-		{ Foreground = { Color = C.fg2 } },
+		{ Foreground = { Color = C.fg3 } },
 		{ Text = wezterm.nerdfonts.md_clock_outline .. " " },
-		{ Foreground = { Color = C.fg } },
+		{ Foreground = { Color = C.fg3 } },
 		{ Text = time .. "  " },
-		{ Foreground = { Color = C.fg2 } },
+		{ Foreground = { Color = C.fg3 } },
 		{ Text = battery .. " " },
 	}))
 end
