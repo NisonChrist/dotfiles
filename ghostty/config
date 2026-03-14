@@ -66,7 +66,7 @@ theme = "Carbonfox"
 shell-integration-features = no-cursor
 shell-integration = fish
 
-# quick-terminal-size = 50%,100px
+quick-terminal-size = 50%,50%
 # Keybindings
 keybind = global:cmd+g=toggle_quick_terminal
 
