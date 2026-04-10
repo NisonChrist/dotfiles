@@ -1,5 +1,4 @@
 command = /usr/local/bin/fish
-term = xterm-256color
 
 font-size = 16
 font-family = "Maple Mono Normal NF CN"
