@@ -106,7 +106,7 @@ def _draw_right_status(screen: Screen, is_last: bool) -> int:
         return screen.cursor.x
 
     cells = [
-        (CLOCK_FG, CLOCK_BG, datetime.datetime.now().strftime(" %H:%M ")),
+        (CLOCK_FG, CLOCK_BG, datetime.datetime.now().strftime(" %H:%M:%S ")),
         (DATE_FG, DATE_BG, datetime.datetime.now().strftime(" %Y/%m/%d ")),
         # (DATE_FG, DATE_BG, datetime.datetime.now().strftime(" %a %b %d %H:%M %Y ")),
         # (DATE_FG, DATE_BG, datetime.datetime.now().strftime(" %c ")),
