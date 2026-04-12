@@ -1,4 +1,6 @@
--- Normal mode 
+vim.g.mapleader = " "
+
+-- Normal mode
 vim.keymap.set("n", "H", "0")
 vim.keymap.set("n", "L", "$")
 
@@ -25,4 +27,3 @@ vim.keymap.set("n", "<leader>s", ":split ")
 -- Terminal
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('t', 'jk', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-
