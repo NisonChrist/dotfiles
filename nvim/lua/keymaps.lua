@@ -27,3 +27,7 @@ vim.keymap.set("n", "<leader>s", ":split ")
 -- Terminal
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('t', 'jk', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+-- Pack Manager
+vim.keymap.set("n", "<leader>U", ":lua vim.pack.update()")
+vim.keymap.set("n", "<leader>D", ":lua vim.pack.del({})")
