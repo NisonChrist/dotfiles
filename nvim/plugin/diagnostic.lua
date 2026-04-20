@@ -1,5 +1,5 @@
 vim.pack.add({
-  { src = "https://github.com/rachartier/tiny-inline-diagnostic.nvim", name = "tiny-inline-diagnostic" }
+	{ src = "https://github.com/rachartier/tiny-inline-diagnostic.nvim", name = "tiny-inline-diagnostic" },
 })
 
 require("tiny-inline-diagnostic").setup()
