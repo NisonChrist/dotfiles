@@ -12,14 +12,14 @@ background-blur-radius = 10
 
 cursor-invert-fg-bg = true
 cursor-style = block
-custom-shader = "~/.config/ghostty/shaders/cursor_smear.glsl"
+# custom-shader = "~/.config/ghostty/shaders/cursor_smear.glsl"
 
 # theme = "Wez"
 # theme = "Solarized Dark Patched"
 # theme = "Dracula+"
 # theme = "Gruvbox Dark Hard"
-# theme = "Catppuccin Mocha"
-theme = "Carbonfox"
+theme = "Catppuccin Mocha"
+# theme = "Carbonfox"
 
 # background = #1e1e1f
 # foreground = #cbd5e1
