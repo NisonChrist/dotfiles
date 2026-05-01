@@ -17,8 +17,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Tabs
 vim.keymap.set('n', 'tn', ':tabnew<CR>', { desc = 'New tab' })
-vim.keymap.set('n', 'th', ':tabnext<CR>', { desc = 'Previous tab' })
-vim.keymap.set('n', 'tl', ':tabprevious<CR>', { desc = 'Next tab' })
+vim.keymap.set('n', 'tl', ':tabnext<CR>', { desc = 'Next tab' })
+vim.keymap.set('n', 'th', ':tabprevious<CR>', { desc = 'Previous tab' })
 
 -- Windows
 vim.keymap.set("n", "<leader>v", ":vsplit ")
