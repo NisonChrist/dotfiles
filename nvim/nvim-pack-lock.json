@@ -1,7 +1,7 @@
 {
   "plugins": {
     "autopairs": {
-      "rev": "59bce2eef357189c3305e25bc6dd2d138c1683f5",
+      "rev": "7b9923abad60b903ece7c52940e1321d39eccc79",
       "src": "https://github.com/windwp/nvim-autopairs"
     },
     "blink.cmp": {
@@ -21,15 +21,15 @@
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "markview": {
-      "rev": "8b82823bbe7b452c5920ab22947e186c6cb067b4",
+      "rev": "dbf74b6db11c1468d5128a38b26b6d99dc7316e9",
       "src": "https://github.com/OXY2DEV/markview.nvim"
     },
     "mason": {
-      "rev": "cb8445f8ce85d957416c106b780efd51c6298f89",
+      "rev": "e54f5bf5f12c560da31c17eee5b3e1bd369f3ff9",
       "src": "https://github.com/mason-org/mason.nvim"
     },
     "nightfox": {
-      "rev": "ba47d4b4c5ec308718641ba7402c143836f35aa9",
+      "rev": "26b61b1f856ec37cae3cb64f5690adb955f246a1",
       "src": "https://github.com/EdenEast/nightfox.nvim"
     },
     "nvim-colorizer": {
@@ -53,7 +53,7 @@
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
     "telescope": {
-      "rev": "506338434fec5ad19cb1f8d45bf92d66c4917393",
+      "rev": "f04ab730b8f9c6bf3f54a206d0dcddfd70c52d59",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
     },
     "telescope-file-browser.nvim": {
