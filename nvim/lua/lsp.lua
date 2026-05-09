@@ -1,4 +1,5 @@
 vim.lsp.enable({
+  "bashls",       -- bash
   "lua_ls",        -- lua
   "ty",            -- python
   -- "ts_ls",     -- typescript
