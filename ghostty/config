@@ -1,9 +1,16 @@
 command = /usr/local/bin/fish
-
-font-size = 16
-font-family = "Maple Mono Normal NF CN"
+# adjust-cell-width = 1
+font-size = 18
+# font-family = "Maple Mono NF CN"
+# font-family = "Maple Mono Normal NF CN"
+# font-family = "Hack Nerd Font"
 # font-family = "Jetbrain Mono Nerd Font"
+font-family = "Iosevka Nerd Font"
 
+# ==Only for font: Iosevka== #
+# font-thicken = true
+# font-thicken-strength = 100
+# ========================== #
 window-width = 160
 window-height = 50
 
