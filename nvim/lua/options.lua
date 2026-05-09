@@ -1,6 +1,7 @@
 vim.opt.number = true         -- 显示行号
 vim.opt.relativenumber = true -- 显示相对行号
-vim.opt.signcolumn = "yes:2"
+vim.opt.signcolumn = "yes"
+-- vim.opt.signcolumn = "yes:2"
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
