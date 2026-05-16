@@ -4,13 +4,14 @@ local ui = require 'ui'
 local config = wezterm.config_builder()
 
 -- config.color_scheme = 'Builtin Dark'
--- config.color_scheme = 'Catppuccin Mocha'
-config.color_scheme = 'carbonfox'
+config.color_scheme = 'Catppuccin Mocha'
+-- config.color_scheme = 'carbonfox'
 -- config.color_scheme = 'Everforest Dark (Gogh)'
 -- config.color_scheme = 'Wez'
 -- config.color_scheme = 'Dracula (Official)'
 
-config.font = wezterm.font 'Maple Mono Normal NF CN'
+-- config.font = wezterm.font 'Maple Mono Normal NF CN'
+config.font = wezterm.font 'Maple Mono NF CN'
 -- config.font = wezterm.font 'Jetbrains Mono'
 -- config.font = wezterm.font 'Google Sans Code'
 -- config.font = wezterm.font 'Monaspace Radon'
