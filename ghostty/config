@@ -1,11 +1,14 @@
-command = /usr/local/bin/fish
+# command = /usr/local/bin/fish
+# command = /usr/local/bin/brush
+command = /usr/local/bin/bash
 # adjust-cell-width = 1
-font-size = 18
+font-size = 16
 # font-family = "Maple Mono NF CN"
 # font-family = "Maple Mono Normal NF CN"
-# font-family = "Hack Nerd Font"
+font-family = "Hack Nerd Font"
+# font-family = "Google Sans Code"
 # font-family = "Jetbrain Mono Nerd Font"
-font-family = "Iosevka Nerd Font"
+# font-family = "Iosevka Nerd Font"
 
 # ==Only for font: Iosevka== #
 # font-thicken = true
@@ -70,6 +73,8 @@ theme = "Catppuccin Mocha"
 # palette = 15=#fafafa
 
 shell-integration-features = no-cursor
+# shell-integration-features = true
+# fish, zsh, bash ...
 shell-integration = fish
 
 quick-terminal-size = 50%,50%
@@ -88,3 +93,4 @@ keybind = cmd+s>z=toggle_split_zoom
 
 keybind = cmd+s>e=equalize_splits
 
+macos-option-as-alt = left

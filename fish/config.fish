@@ -4,7 +4,7 @@ if status is-interactive
   zoxide init fish | source
 end
 
-# fish_vi_key_bindings
+fish_vi_key_bindings
 
 set fish_greeting ""
 
@@ -14,4 +14,4 @@ abbr -a cl "clear"
 abbr -a ff "fastfetch"
 abbr -a t "tmux"
 
-# set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
+set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
