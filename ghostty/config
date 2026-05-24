@@ -2,7 +2,7 @@
 # command = /usr/local/bin/brush
 command = /usr/local/bin/bash
 # adjust-cell-width = 1
-font-size = 16
+font-size = 17
 # font-family = "Maple Mono NF CN"
 # font-family = "Maple Mono Normal NF CN"
 font-family = "Hack Nerd Font"
@@ -17,7 +17,7 @@ font-family = "Hack Nerd Font"
 window-width = 160
 window-height = 50
 
-background-opacity = 0.85
+background-opacity = 0.75
 background-blur-radius = 10
 
 cursor-invert-fg-bg = true
