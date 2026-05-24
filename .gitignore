@@ -14,3 +14,5 @@ fish/completions/
 !btop/**
 !kitty/
 !kitty/**
+!starship/
+!starship/**
