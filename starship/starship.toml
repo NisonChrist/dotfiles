@@ -1,5 +1,7 @@
 command_timeout = 5000
 
+"$schema" = 'https://starship.rs/config-schema.json'
+
 format = """
 $directory\
 $git_branch\
@@ -13,7 +15,6 @@ error_symbol = '[\[INS\]❯](bold red)'
 vimcmd_symbol = '[\[NOR\]❯](bold blue)'
 vimcmd_visual_symbol = '[\[VIS\]❯](bold fg:yellow)'
 
-"$schema" = 'https://starship.rs/config-schema.json'
 [aws]
 symbol = "  "
 
