@@ -72,8 +72,8 @@ theme = "Catppuccin Mocha"
 # palette = 14=#bfdbfe
 # palette = 15=#fafafa
 
-shell-integration-features = no-cursor
-# shell-integration-features = true
+# shell-integration-features = no-cursor
+shell-integration-features = true
 # fish, zsh, bash ...
 shell-integration = fish
 
