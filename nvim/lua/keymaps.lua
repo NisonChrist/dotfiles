@@ -29,5 +29,5 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 vim.keymap.set("t", "jk", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- Pack Manager
-vim.keymap.set("n", "<leader>U", ":lua vim.pack.update()", { desc = "Update plugins" })
+vim.keymap.set("n", "<leader>U", ":lua vim.pack.update()<CR>", { desc = "Update plugins" })
 vim.keymap.set("n", "<leader>D", ":lua vim.pack.del({})", { desc = "Delete plugin" })
