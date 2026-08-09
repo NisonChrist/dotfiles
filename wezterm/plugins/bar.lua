@@ -1,8 +1,13 @@
+local M = {}
+
 local wezterm = require("wezterm")
-local config = wezterm.config_builder()
+
 local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
 
-bar.apply_to_config(config, {
+M.plugin = bar
+
+M.config = {
+  position = "top",
 	modules = {
 		username = {
 			enabled = false,
@@ -11,4 +16,6 @@ bar.apply_to_config(config, {
 			enabled = false,
 		},
 	},
-})
+}
+
+return M

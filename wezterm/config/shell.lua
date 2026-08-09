@@ -1,9 +1,9 @@
 local M = {}
 
 function M.apply(config)
-	local utils = require("config.utils")
 	-- Spawn a fish shell in login mode
 	config.default_prog = { "/usr/local/bin/fish", "-l" }
+	-- local utils = require("config.utils")
 	-- if utils.is_windows() then
 	-- 	config.default_prog = { "pwsh", "--NoLogo" }
 	-- else
