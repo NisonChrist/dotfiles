@@ -20,6 +20,12 @@ vim.keymap.set("n", "tn", ":tabnew<CR>", { desc = "New tab" })
 vim.keymap.set("n", "tl", ":tabnext<CR>", { desc = "Next tab" })
 vim.keymap.set("n", "th", ":tabprevious<CR>", { desc = "Previous tab" })
 
+-- Buffers
+for i = 1, 9 do
+	vim.keymap.set("n", "t" .. i, ":LualineBuffersJump " .. i .. "<CR>", { desc = "Jump2buffer " .. i })
+end
+vim.keymap.set("n", "td", ":bd<CR>", { desc = "Delete buffer" })
+
 -- Windows
 vim.keymap.set("n", "<leader>v", ":vsplit ", { desc = "Vertical split" })
 vim.keymap.set("n", "<leader>s", ":split ", { desc = "Horizontal split" })

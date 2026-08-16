@@ -3,7 +3,7 @@ vim.pack.add({
 })
 
 require("nvim-tree").setup()
-vim.cmd([[
-      :hi      NvimTreeCursorLine guibg=None guifg=#f5c2e7
-]])
+-- vim.cmd([[
+--       :hi      NvimTreeCursorLine guibg=None guifg=#f5c2e7
+-- ]])
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>")

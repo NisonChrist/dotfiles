@@ -1,15 +1,17 @@
 ---@brief
 ---
---- https://github.com/microsoft/typescript-go
+--- https://github.com/microsoft/typescript
 ---
---- `typescript-go` is experimental port of the TypeScript compiler (tsc) and language server (tsserver) to the Go programming language.
+--- TypeScript is a language for application-scale JavaScript.
+--- TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS.
+--- TypeScript compiles to readable, standards-based JavaScript.
 ---
---- `tsgo` can be installed via npm `npm install @typescript/native-preview`.
+--- `tsc` can be installed via npm `npm install typescript`.
 ---
 --- ### Monorepo support
 ---
---- `tsgo` supports monorepos by default. It will automatically find the `tsconfig.json` or `jsconfig.json` corresponding to the package you are working on.
---- This works without the need of spawning multiple instances of `tsgo`, saving memory.
+--- `tsc` supports monorepos by default. It will automatically find the `tsconfig.json` or `jsconfig.json` corresponding to the package you are working on.
+--- This works without the need of spawning multiple instances of `tsc`, saving memory.
 ---
 --- It is recommended to use the same version of TypeScript in all packages, and therefore have it available in your workspace root. The location of the TypeScript binary will be determined automatically, but only once.
 ---
@@ -34,7 +36,7 @@
 ---     +-- node-module
 ---         +-- package.json
 ---         +-- src
----             +-- index.ts <-- a non-Deno file (ie, should use ts_ls or tsgols)
+---             +-- index.ts <-- a non-Deno file (ie, should use ts_ls or tsc)
 --- ```
 ---
 --- From the file being edited, we walk up to find the nearest package manager lockfile. This is PROJECT ROOT.
@@ -62,11 +64,19 @@ return {
     },
   },
   cmd = function(dispatchers, config)
-    local cmd = 'tsgo'
-    if (config or {}).root_dir then
-      local local_cmd = vim.fs.joinpath(config.root_dir, 'node_modules/.bin', cmd)
-      if vim.fn.executable(local_cmd) == 1 then
-        cmd = local_cmd
+    local cmd = 'tsc'
+    local bins = { 'tsc', 'tsgo' }
+    for _, bin in ipairs(bins) do
+      if (config or {}).root_dir then
+        local local_cmd = vim.fs.joinpath(config.root_dir, 'node_modules/.bin', bin)
+        if vim.fn.executable(local_cmd) == 1 then
+          cmd = local_cmd
+          break
+        end
+      end
+      if vim.fn.executable(bin) == 1 then
+        cmd = bin
+        break
       end
     end
     return vim.lsp.rpc.start({ cmd, '--lsp', '--stdio' }, dispatchers)

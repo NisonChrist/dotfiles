@@ -1,5 +1,5 @@
 vim.pack.add({
-  { src = "https://github.com/catgoose/nvim-colorizer.lua", name = "nvim-colorizer" }
+	{ src = "https://github.com/catgoose/nvim-colorizer.lua", name = "nvim-colorizer" },
 })
 
-require("colorizer").setup()
+-- require("colorizer").setup()

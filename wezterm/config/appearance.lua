@@ -3,14 +3,14 @@ local M = {}
 function M.apply(config)
 	-- local constants = require("config.constants")
 	-- Color scheme
-	config.color_scheme = "rose-pine"  --'Wez'
+	config.color_scheme = "Everforest Dark (Gogh)" --'Wez' 'rose-pine'
 
 	config.force_reverse_video_cursor = true
 
 	config.initial_rows = 35
 	config.initial_cols = 120
 
-  config.hide_tab_bar_if_only_one_tab = true
+	config.hide_tab_bar_if_only_one_tab = true
 	config.window_decorations = "TITLE | RESIZE" -- "TITLE | RESIZE"
 	config.window_background_opacity = 0.15 -- for full screen with background image
 	-- config.window_background_opacity = 0.75
@@ -32,6 +32,7 @@ function M.apply(config)
 	config.window_background_image = require("wezterm").config_dir .. "/assets/云彩-夜晚-夜景.png"
 
 	-- Scrollbar Color
+	-- config.enable_scroll_bar = true
 	-- config.colors = config.colors or {}
 	-- config.colors.scrollbar_thumb = "#242936"
 

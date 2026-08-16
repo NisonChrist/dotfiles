@@ -1,10 +1,11 @@
 vim.lsp.enable({
-  "bashls",       -- bash
+  "bashls",        -- bash
+  "fish_lsp",      -- fish
   "lua_ls",        -- lua
   "ty",            -- python
-  -- "ts_ls",     -- typescript
-  "tsgo",          -- typescript
+  "tsc",          -- typescript
   "tinymist",      -- typst
+  "clangd",        -- c/c++
   "rust_analyzer", -- rust
   "zls",           -- zig
 })
