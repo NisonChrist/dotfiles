@@ -1,5 +1,6 @@
 vim.pack.add({
 	{ src = "https://github.com/nvim-mini/mini.pairs" },
+	{ src = "https://github.com/nvim-mini/mini.files" },
 })
 
 require("mini.pairs").setup(
@@ -30,3 +31,6 @@ require("mini.pairs").setup(
 		},
 	}
 )
+
+require("mini.files").setup()
+vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>", { desc = "Open Files" })
